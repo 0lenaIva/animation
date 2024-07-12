@@ -1,0 +1,74 @@
+div{
+	width:500px;
+	height:500px;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.7);
+	margin: 20px auto;
+	border-radius:15px;
+	background-image:url(https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1720656000&semt=sph);
+	background-size:cover;
+	
+	position:relative;
+	overflow:hidden;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.rocket{
+	width:70px;
+	position:absolute;
+	top:-70%;
+	left:30%;
+	
+	animation-name:fly;
+	animation-duration: 5s;
+	animation-iteration-count:1;
+	animation-timing-function: ease-out;
+	animation-delay:2s;
+}
+
+h1{
+	font-weight:900;
+	letter-spacing:5px;
+	font-size:50px;
+	color:white;
+	animation-name:text;
+	animation-duration: 7s;
+	animation-iteration-count:1;
+	animation-timing-function: ease-in;
+	transform:scale(2);
+	animation-delay:2s;
+	animation-fill-mode: backwards;
+}
+
+@keyframes text{
+	0%{
+		color:black;
+		opacity:0;
+		transform:scale(0.5);
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		color:white;
+		transform:scale(2);
+	}
+}
+
+@keyframes fly{
+	0%{
+		top:-30%;
+		left:30%;
+		}
+	50%{top:70%;
+		left:30%;
+		transform:rotate(0deg) scale(2);
+	}
+	100%{
+		top:-30%;
+		left:120%;
+		transform:rotate(90deg) scale(0.7);
+		}
+}
+
